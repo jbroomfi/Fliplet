@@ -1,16 +1,28 @@
 class MyUtils {
 
+  static #COMPONENT = 'Utility helper for Fliplet';
+  static #VERSION = "0.2";
+
+  #nameValue;
+
   greeting = 'Hello';
 
   constructor(name = 'Dummy User') {
-    this.name = name;
+    this.#nameValue = name;
   }
 
-  getName() {
-    return this.name;
+  get name() {
+    return this.#nameValue;
   }
 
-  getGreeting(name = this.name) {
+  set name(name) {
+    if (name === '') {
+      throw new Error (`name field of MyUtils cannot be empty`);
+    }
+    this.#nameValue = name;
+  }
+
+  getGreeting(name = this.#nameValue) {
     //debugger;
     console.log(`Hello ${name} at ${new Date().toISOString()}`);
   }
