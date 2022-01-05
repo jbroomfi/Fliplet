@@ -2,7 +2,7 @@ class MyUtils {
 
   greeting = 'Hello';
 
-  constructor(name) {
+  constructor(name = 'Dummy User') {
     this.name = name;
   }
 
@@ -10,13 +10,9 @@ class MyUtils {
     return this.name;
   }
 
-  getGreeting(name) {
+  getGreeting(name = this.name) {
     //debugger;
-    if (name == undefined || name == "") {
-      console.log(`Hello ${this.name} at ${new Date().toISOString()}`);
-    } else {
-      console.log(`Hello ${name} at ${new Date().toISOString()}`);
-    }
+    console.log(`Hello ${name} at ${new Date().toISOString()}`);
   }
   
 }
