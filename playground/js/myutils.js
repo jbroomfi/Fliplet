@@ -28,7 +28,7 @@ class MyUtils {
   }
 
   getVersion() {
-    console.log(`${this.#COMPONENT_NAME} v${this.#VERSION}`)
+    console.log(`${this.#COMPONENT_NAME} v${this.#VERSION}`);
   }
 }
 
