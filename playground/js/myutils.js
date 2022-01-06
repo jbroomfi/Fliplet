@@ -1,6 +1,6 @@
 class MyUtils {
 
-  static #COMPONENT = 'Utility helper for Fliplet';
+  static #COMPONENT_NAME = 'MyUtils';
   static #VERSION = "0.2";
 
   #nameValue;
@@ -26,6 +26,9 @@ class MyUtils {
     //debugger;
     console.log(`Hello ${name} at ${new Date().toISOString()}`);
   }
-  
+
+  getVersion() {
+    console.log(`${this.#COMPONENT_NAME} v${this.#VERSION}`)
+  }
 }
 
